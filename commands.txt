@@ -1,0 +1,2 @@
+python -m tg_bot_template.bot
+source .uv/Scripts/activate
