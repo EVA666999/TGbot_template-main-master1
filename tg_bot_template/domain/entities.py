@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy import Column, Integer, String, BigInteger
 
@@ -18,13 +17,3 @@ class User(Base):
 
     def __repr__(self):
         return f"<User(id={self.id}, name='{self.name}', taps={self.taps})>" 
-=======
-from dataclasses import dataclass
-
-@dataclass
-class User:
-    """Доменная сущность пользователя."""
-    id: int
-    name: str
-    info: str 
->>>>>>> c0ce5bcc81f614ac8b3fb8fcde787513781c2614

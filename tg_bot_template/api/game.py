@@ -4,7 +4,6 @@ from aiogram.filters import Command
 from loguru import logger
 from ..domain.game_service import GameService
 from ..repo.game_repo_sqlalchemy import GameRepoSQLAlchemy
-<<<<<<< HEAD
 from ..repo.unit_of_work import UnitOfWork
 from ..di import session_factory
 
@@ -17,15 +16,6 @@ async def get_game_service():
     async with uow as session:
         game_repo = GameRepoSQLAlchemy(session)
         return GameService(game_repo)
-=======
-from tg_bot_template.di import uow
-
-router = Router()
-# Инициализация game_service через DI
-
-game_repo = GameRepoSQLAlchemy(uow)
-game_service = GameService(game_repo)
->>>>>>> c0ce5bcc81f614ac8b3fb8fcde787513781c2614
 
 def get_button_markup(taps: int = 0) -> InlineKeyboardMarkup:
     """Создать inline-кнопку с количеством нажатий."""
