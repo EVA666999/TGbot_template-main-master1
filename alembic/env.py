@@ -11,13 +11,22 @@ from sqlalchemy.engine import Connection
 from sqlalchemy.ext.asyncio import async_engine_from_config
 
 from alembic import context
+<<<<<<< HEAD
 from tg_bot_template.domain.entities import Base
 from tg_bot_template.config import settings
 
+=======
+>>>>>>> c0ce5bcc81f614ac8b3fb8fcde787513781c2614
 
 # Добавляем путь к корню проекта
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 
+<<<<<<< HEAD
+=======
+from tg_bot_template.bot_infra.settings import BotSettings
+from tg_bot_template.db_infra.models import Base
+
+>>>>>>> c0ce5bcc81f614ac8b3fb8fcde787513781c2614
 # this is the Alembic Config object, which provides
 # access to the values within the .ini file in use.
 config = context.config
@@ -43,7 +52,12 @@ def get_url():
     Returns:
         str: Database URL
     """
+<<<<<<< HEAD
     return f"postgresql+asyncpg://{settings.POSTGRES_USER}:{settings.POSTGRES_PASSWORD}@{settings.POSTGRES_HOST}:{settings.POSTGRES_PORT}/{settings.POSTGRES_DB}"
+=======
+    settings = BotSettings()
+    return f"postgresql+asyncpg://{settings.postgres_user}:{settings.postgres_password}@{settings.postgres_host}:{settings.postgres_port}/{settings.postgres_db}"
+>>>>>>> c0ce5bcc81f614ac8b3fb8fcde787513781c2614
 
 def run_migrations_offline() -> None:
     """Run migrations in 'offline' mode.

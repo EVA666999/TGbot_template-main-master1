@@ -1,3 +1,7 @@
 python -m tg_bot_template.bot
+<<<<<<< HEAD
 source .venv/Scripts/activate
 python -m tg_bot_template.bot
+=======
+source .uv/Scripts/activate
+>>>>>>> c0ce5bcc81f614ac8b3fb8fcde787513781c2614
